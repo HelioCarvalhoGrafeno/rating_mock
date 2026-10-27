@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Variáveis de ambiente e credenciais locais
+.env
+
+# Saída de mocks gerados localmente (mantém pasta output rastreada via .gitkeep)
+output/*
+!output/.gitkeep
+
+# Arquivos de SO e IDEs
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+.idea/
+.vscode/
