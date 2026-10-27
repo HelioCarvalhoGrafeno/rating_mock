@@ -25,6 +25,7 @@ OUTPUT_DIR = Path(__file__).resolve().parent / "output"
 FILE_DESTINATIONS = {
     "_liquidez.json": "bronze/input/bureaus/nuclea/cnpj/json",
     "_quod.json": "bronze/input/bureaus/quod/cnpj/json",
+    "_quod.bevoc": "bronze/input/bureaus/quod/cnpj/bevoc",
     "_proscore.json": "bronze/input/bureaus/proscore/cnpj/json",
     "_basic_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
     "_history_basic_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
@@ -97,12 +98,17 @@ def upload_to_s3(planned: list[PlannedFile], cnpj: str, env: str) -> None:
     for item in planned:
         content = build_mock_content(item.source, cnpj)
         key = f"{item.s3_prefix}/{item.target_name}"
+        content_type = (
+            "application/json"
+            if item.target_name.endswith(".json")
+            else "binary/octet-stream"
+        )
         try:
             s3.put_object(
                 Bucket=bucket,
                 Key=key,
                 Body=content.encode("utf-8"),
-                ContentType="application/json",
+                ContentType=content_type,
             )
         except (BotoCoreError, ClientError) as exc:
             log.error("Falha ao enviar s3://%s/%s: %s", bucket, key, exc)

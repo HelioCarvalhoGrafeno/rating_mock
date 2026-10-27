@@ -41,6 +41,7 @@ A partir de um novo CNPJ informado pelo usuário:
 | :--- | :--- | :--- |
 | `_liquidez.json` | **Nuclea** | `bronze/input/bureaus/nuclea/cnpj/json` |
 | `_quod.json` | **Quod** | `bronze/input/bureaus/quod/cnpj/json` |
+| `_quod.bevoc` | **Quod (Bevoc)** | `bronze/input/bureaus/quod/cnpj/bevoc` |
 | `_proscore.json` | **Proscore** | `bronze/input/bureaus/proscore/cnpj/json` |
 | `_basic_data.json` | **BigDataCorp** | `bronze/input/bureaus/bigdatacorp/cnpj/json` |
 | `_registration_data.json` | **BigDataCorp** | `bronze/input/bureaus/bigdatacorp/cnpj/json` |
@@ -170,12 +171,13 @@ rating_mock/
 ├── .python-version           # Versão de referência do Python
 ├── .gitignore                # Arquivos ignorados pelo Git
 ├── README.md                 # Documentação do projeto
-├── json/                     # Arquivos JSON de referência (CNPJ 00009838000146)
+├── json/                     # Arquivos de referência (CNPJ 00009838000146)
 │   ├── 00009838000146_basic_data.json
 │   ├── 00009838000146_economic_group_relationships.json
 │   ├── 00009838000146_history_basic_data.json
 │   ├── 00009838000146_liquidez.json
 │   ├── 00009838000146_proscore.json
+│   ├── 00009838000146_quod.bevoc
 │   ├── 00009838000146_quod.json
 │   └── 00009838000146_registration_data.json
 └── output/                   # Diretório de saída dos mocks gerados
