@@ -29,6 +29,7 @@ FILE_DESTINATIONS = {
     "_basic_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
     "_history_basic_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
     "_economic_group_relationships.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
+    "_registration_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
 }
 
 ENVIRONMENTS = {
