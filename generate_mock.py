@@ -27,10 +27,13 @@ FILE_DESTINATIONS = {
     "_quod.json": "bronze/input/bureaus/quod/cnpj/json",
     "_quod.bevoc": "bronze/input/bureaus/quod/cnpj/bevoc",
     "_proscore.json": "bronze/input/bureaus/proscore/cnpj/json",
+    "_proscore_kyc.json": "bronze/input/bureaus/proscore/cnpj/json",
     "_basic_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
     "_history_basic_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
     "_economic_group_relationships.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
     "_registration_data.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
+    "_kyc_pj.json": "bronze/input/bureaus/bigdatacorp/cnpj/json",
+    "_negative_media.json": "bronze/input/bureaus/kappi/cnpj/json",
 }
 
 ENVIRONMENTS = {
